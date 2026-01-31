@@ -1,4 +1,4 @@
-import { MessageSquare, BarChart3, Film, Image, Users, Zap } from "lucide-react";
+import { MessageSquare, BarChart3, Film, Image, Users, Zap, Calendar, MessageSquareText } from "lucide-react";
 
 const features = [
   {
@@ -54,6 +54,24 @@ const features = [
     statLabel: "LEAD CAPTURE",
     title: "Lead Generation",
     description: "Convert comments to leads instantly with automated DM funnels.",
+  },
+  {
+    icon: Calendar,
+    iconBg: "bg-purple-50",
+    iconColor: "text-purple-600",
+    stat: "Auto",
+    statLabel: "POST SCHEDULING",
+    title: "Smart Scheduling",
+    description: "Plan and schedule posts weeks in advance. Auto-publish at optimal times for maximum engagement.",
+  },
+  {
+    icon: MessageSquareText,
+    iconBg: "bg-teal-50",
+    iconColor: "text-accent",
+    stat: "AI-Powered",
+    statLabel: "COMMENT AUTOMATION",
+    title: "Comment Automation",
+    description: "Automatically respond to comments with keyword triggers. Boost engagement by 300%.",
   },
 ];
 
