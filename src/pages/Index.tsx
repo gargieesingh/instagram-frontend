@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import DMAutomationSection from "@/components/DMAutomationSection";
+import PostSchedulingSection from "@/components/PostSchedulingSection";
+import CommentAutomationSection from "@/components/CommentAutomationSection";
 import WhyInstagramSection from "@/components/WhyInstagramSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import FAQSection from "@/components/FAQSection";
@@ -16,6 +18,8 @@ const Index = () => {
         <HeroSection />
         <StatsSection />
         <DMAutomationSection />
+        <PostSchedulingSection />
+        <CommentAutomationSection />
         <WhyInstagramSection />
         <FeaturesSection />
         <FAQSection />
