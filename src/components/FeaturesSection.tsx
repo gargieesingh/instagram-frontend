@@ -1,4 +1,4 @@
-import { MessageSquare, BarChart3, Film, Image, Users, Zap, Calendar, MessageSquareText } from "lucide-react";
+import { MessageSquare, BarChart3, Film, Image, Users, Zap, Calendar, MessageSquareText, Sparkles } from "lucide-react";
 
 const features = [
   {
@@ -72,6 +72,15 @@ const features = [
     statLabel: "COMMENT AUTOMATION",
     title: "Comment Automation",
     description: "Automatically respond to comments with keyword triggers. Boost engagement by 300%.",
+  },
+  {
+    icon: Sparkles,
+    iconBg: "bg-purple-50",
+    iconColor: "text-purple-600",
+    stat: "AI Magic",
+    statLabel: "POST CREATION",
+    title: "AI Post Creator",
+    description: "Generate captions, hashtags, and content ideas with AI. Create engaging posts in seconds.",
   },
 ];
 

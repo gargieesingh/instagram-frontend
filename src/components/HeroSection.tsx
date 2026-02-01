@@ -1,318 +1,232 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Send, TrendingUp, Play, Heart, MessageCircle, Users } from "lucide-react";
+import { ArrowRight, Play, TrendingUp, Send, Users, Heart, MessageCircle, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 gradient-hero-bg" />
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-accent/5 via-transparent to-transparent rounded-full -translate-y-1/2 translate-x-1/4" />
-      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-instagram-pink/5 via-transparent to-transparent rounded-full translate-y-1/2 -translate-x-1/4" />
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="relative pt-32 pb-0 lg:pt-40 overflow-hidden bg-white">
+      {/* Background Blobs */}
+      <div className="absolute top-20 right-20 w-[500px] h-[500px] bg-purple-100/40 rounded-full blur-3xl -z-10 animate-blob" />
+      <div className="absolute bottom-40 left-10 w-[400px] h-[400px] bg-pink-100/40 rounded-full blur-3xl -z-10 animate-blob" style={{ animationDelay: '2s' }} />
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center mb-20">
           {/* Left Content */}
-          <div className="space-y-8 max-w-xl">
+          <div className="space-y-8 max-w-2xl">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-card border border-border">
-              <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-sm font-medium text-muted-foreground">The #1 Instagram Growth Platform</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-50 border border-purple-100 shadow-sm">
+              <span className="flex h-2 w-2 rounded-full bg-purple-600 animate-pulse" />
+              <span className="text-sm font-semibold text-purple-700">#1 Instagram Growth Platform</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] tracking-tight">
-              Scale Your Brand{" "}
-              <br className="hidden sm:block" />
-              <span className="gradient-instagram-text">with Instagram</span>
+            {/* Heading */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-slate-900">
+              Grow Your
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Instagram</span>
+              <br />
+              On Autopilot
             </h1>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              The smartest Instagram Marketing Platform to Automate DMs based on comments, 
-              grow engagement, and convert followers into paying customers.
-            </p>
-            
-            <div className="flex flex-wrap gap-4 pt-2">
-              <Button variant="instagram" size="xl" className="group">
-                Try InstaGrow for FREE
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="gap-2 bg-white hover:bg-white/80">
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                  <Play className="w-3 h-3 text-primary-foreground fill-primary-foreground ml-0.5" />
-                </div>
-                Watch Demo
-              </Button>
-            </div>
 
-            {/* Social proof */}
-            <div className="flex items-center gap-4 pt-4">
+            {/* Description */}
+            <p className="text-xl text-slate-600 leading-relaxed max-w-xl">
+              Automate DMs, schedule posts, and convert comments into customers with AI-powered Instagram marketing tools.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 pt-4">
+              <button 
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-purple-200 hover:shadow-purple-300 hover:-translate-y-1"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button
+                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 border border-slate-200 font-semibold text-lg text-slate-700 px-8 py-4 rounded-xl transition-all hover:border-slate-300 hover:shadow-md"
+              >
+                <Play className="w-5 h-5 fill-slate-700" />
+                Watch Demo
+              </button>
+            </div>
+            
+            {/* Social Proof */}
+            <div className="flex items-center gap-5 pt-6">
               <div className="flex -space-x-3">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <div 
-                    key={i} 
-                    className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-xs font-semibold text-slate-600"
-                  >
-                    {String.fromCharCode(64 + i)}
-                  </div>
+                {[
+                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+                  'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop',
+                  'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop',
+                ].map((src, i) => (
+                  <img 
+                    key={i}
+                    src={src}
+                    alt={`User ${i + 1}`}
+                    className="w-12 h-12 rounded-full border-2 border-white object-cover shadow-md"
+                  />
                 ))}
               </div>
-              <div className="text-sm">
-                <p className="font-semibold text-foreground">500+ Creators</p>
-                <p className="text-muted-foreground">already growing</p>
+              <div className="border-l border-slate-200 pl-5">
+                <p className="text-base font-bold text-slate-900">2,500+ Creators</p>
+                <div className="flex items-center gap-1">
+                   <div className="flex text-yellow-400">★★★★★</div>
+                   <span className="text-sm font-medium text-slate-500 ml-1">4.9/5</span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Content - Floating Cards */}
-          <div className="relative hidden lg:flex items-center justify-center min-h-[500px]">
-            {/* Main phone mockup */}
-            <div className="relative z-10">
-              <div className="w-64 bg-slate-900 rounded-[2.5rem] p-2 shadow-float">
-                <div className="bg-white rounded-[2rem] overflow-hidden">
-                  {/* Phone header */}
-                  <div className="bg-white px-4 py-2 flex justify-between items-center text-[10px]">
-                    <span className="font-semibold">9:41</span>
-                    <div className="w-16 h-5 bg-slate-900 rounded-full" />
-                    <div className="flex gap-1 items-center">
-                      <div className="w-4 h-2.5 bg-slate-400 rounded-sm" />
-                    </div>
-                  </div>
-                  
-                  {/* Instagram header */}
-                  <div className="px-4 py-3 border-b flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 gradient-instagram rounded-full flex items-center justify-center">
-                        <span className="text-white text-xs font-bold">C</span>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold flex items-center gap-1">
-                          creator_pro
-                          <svg className="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                          </svg>
-                        </p>
-                        <p className="text-[10px] text-muted-foreground">Reel • 2h ago</p>
-                      </div>
-                    </div>
-                    <div className="text-muted-foreground">•••</div>
-                  </div>
+          {/* Right Content - Rich Visual Composition */}
+          <div className="relative h-[600px] flex items-center justify-center hidden lg:flex">
+            
+            {/* Colorful Gradient Rings */}
+            <div className="absolute w-[500px] h-[500px] rounded-full border-2 border-dashed border-purple-200/50" />
+            <div className="absolute w-[400px] h-[400px] rounded-full border border-pink-200/60" />
+            <div className="absolute w-[300px] h-[300px] rounded-full bg-gradient-to-br from-purple-50 to-pink-50" />
+            
+            {/* Connecting Lines */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 600 600" fill="none">
+              <path d="M300 300 L150 150" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5" />
+              <path d="M300 300 L450 180" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5" />
+              <path d="M300 300 L480 380" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5" />
+              <path d="M300 300 L420 480" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5" />
+              <path d="M300 300 L120 400" stroke="url(#gradient1)" strokeWidth="1" strokeDasharray="4 4" opacity="0.5" />
+              <defs>
+                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#a855f7" />
+                  <stop offset="100%" stopColor="#ec4899" />
+                </linearGradient>
+              </defs>
+            </svg>
 
-                  {/* Reel content */}
-                  <div className="aspect-[4/5] bg-gradient-to-br from-purple-100 via-pink-100 to-orange-100 flex items-center justify-center relative">
-                    <div className="text-center">
-                      <div className="text-6xl mb-2">🎬</div>
-                      <p className="text-sm font-medium text-slate-600">Your Reel</p>
-                    </div>
-                    {/* Engagement icons on right */}
-                    <div className="absolute right-3 bottom-4 flex flex-col gap-4 items-center">
-                      <div className="flex flex-col items-center">
-                        <Heart className="w-6 h-6 text-white drop-shadow-lg" />
-                        <span className="text-[10px] text-white drop-shadow font-medium">12.4K</span>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <MessageCircle className="w-6 h-6 text-white drop-shadow-lg" />
-                        <span className="text-[10px] text-white drop-shadow font-medium">847</span>
-                      </div>
-                      <div className="flex flex-col items-center">
-                        <Send className="w-6 h-6 text-white drop-shadow-lg" />
-                        <span className="text-[10px] text-white drop-shadow font-medium">Share</span>
-                      </div>
-                    </div>
-                  </div>
+            {/* Central Icon */}
+            <div className="relative z-20 w-28 h-28 bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 rounded-3xl flex items-center justify-center shadow-2xl shadow-purple-400/40 animate-glow">
+              <svg 
+                className="w-14 h-14 text-white" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </div>
 
-                  {/* Comment trigger */}
-                  <div className="p-3 border-t">
-                    <div className="flex items-start gap-2">
-                      <div className="w-6 h-6 rounded-full bg-gradient-to-br from-teal-400 to-teal-600" />
-                      <div className="flex-1">
-                        <p className="text-[10px]">
-                          <span className="font-semibold">user_fan</span>{" "}
-                          <span className="text-muted-foreground">commented:</span>
-                        </p>
-                        <p className="text-xs font-medium text-accent mt-0.5">"LINK" 🔥</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            {/* Floating Card 1 - Top Left */}
+            <div className="absolute top-16 left-8 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float z-10">
+              <div className="w-11 h-11 bg-green-100 rounded-xl flex items-center justify-center">
+                <Send className="w-5 h-5 text-green-600" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-slate-900">Broadcast Sent</p>
+                <p className="text-xs text-slate-500">Just now to 5k users</p>
               </div>
             </div>
 
-            {/* Floating notification card - top right */}
-            <div className="absolute top-4 right-0 bg-white rounded-2xl shadow-float p-4 animate-float z-20 border border-border/50">
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 gradient-instagram rounded-xl flex items-center justify-center">
-                  <Send className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground text-sm">Auto DM Sent!</p>
-                  <p className="text-xs text-accent font-medium">Just now to @user_fan</p>
-                </div>
+            {/* Floating Card 2 - Top Right */}
+            <div className="absolute top-24 right-0 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float z-10" style={{ animationDelay: '1s' }}>
+              <div className="w-11 h-11 bg-purple-100 rounded-xl flex items-center justify-center">
+                <Users className="w-5 h-5 text-purple-600" />
+              </div>
+              <div>
+                <p className="text-lg font-bold text-slate-900">24.5K</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider">Followers</p>
               </div>
             </div>
 
-            {/* Stats card - bottom left */}
-            <div className="absolute bottom-8 -left-4 bg-white rounded-2xl shadow-float p-4 animate-float z-20 border border-border/50" style={{ animationDelay: '1s' }}>
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 bg-blue-50 rounded-xl flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-accent-blue" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">98%</p>
-                  <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">Reply Rate</p>
-                </div>
+            {/* Floating Card 3 - Right */}
+            <div className="absolute top-1/2 -translate-y-1/2 right-0 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float-delayed z-10">
+              <div className="w-11 h-11 bg-blue-100 rounded-xl flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-blue-600" />
+              </div>
+              <div>
+                <p className="text-lg font-bold text-slate-900">98%</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider">Open Rate</p>
               </div>
             </div>
 
-            {/* Users card - top left */}
-            <div className="absolute top-16 -left-8 bg-white rounded-2xl shadow-float p-4 animate-float z-20 border border-border/50" style={{ animationDelay: '0.5s' }}>
-              <div className="flex items-center gap-3">
-                <div className="w-11 h-11 bg-accent rounded-xl flex items-center justify-center">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-foreground">5.2K</p>
-                  <p className="text-[10px] text-muted-foreground uppercase tracking-wider font-medium">DMs Today</p>
-                </div>
+            {/* Floating Card 4 - Bottom Right */}
+            <div className="absolute bottom-24 right-12 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float z-10" style={{ animationDelay: '2s' }}>
+              <div className="w-11 h-11 bg-red-100 rounded-xl flex items-center justify-center">
+                <Heart className="w-5 h-5 text-red-500" />
+              </div>
+              <div>
+                <p className="text-lg font-bold text-slate-900">+247%</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider">Engagement</p>
               </div>
             </div>
 
-            {/* Keyword trigger badge - middle right */}
-            <div className="absolute top-1/2 -right-6 bg-primary text-primary-foreground rounded-full px-4 py-2 shadow-lg animate-float z-20 flex items-center gap-2" style={{ animationDelay: '1.5s' }}>
-              <span className="text-xs font-semibold">Trigger: "LINK"</span>
-              <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            {/* Floating Card 5 - Bottom Left */}
+            <div className="absolute bottom-32 left-4 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float-delayed z-10">
+              <div className="w-11 h-11 bg-orange-100 rounded-xl flex items-center justify-center">
+                <Zap className="w-5 h-5 text-orange-500" />
+              </div>
+              <div>
+                <p className="text-lg font-bold text-slate-900">5 min</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider">Setup</p>
+              </div>
             </div>
 
-            {/* Decorative gradient blobs */}
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-accent/20 via-transparent to-instagram-pink/10 rounded-full blur-3xl" />
+            {/* Floating Card 6 - Left */}
+            <div className="absolute top-1/3 left-0 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3 animate-float z-10" style={{ animationDelay: '3s' }}>
+              <div className="w-11 h-11 bg-pink-100 rounded-xl flex items-center justify-center">
+                <MessageCircle className="w-5 h-5 text-pink-600" />
+              </div>
+              <div>
+                <p className="text-lg font-bold text-slate-900">15.2K</p>
+                <p className="text-xs text-slate-500 uppercase tracking-wider">DMs Sent</p>
+              </div>
+            </div>
+
+            {/* Decorative Dots */}
+            <div className="absolute top-10 right-1/4 w-3 h-3 bg-purple-400 rounded-full animate-pulse" />
+            <div className="absolute bottom-20 left-1/4 w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+            <div className="absolute top-1/3 right-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
           </div>
         </div>
-      </div>
 
-      {/* Dashboard Preview Section */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20 lg:mt-28 relative">
-        <div className="text-center mb-8">
-          <p className="text-sm text-muted-foreground font-medium">Powerful Dashboard to Manage Everything</p>
-        </div>
-        <div className="relative rounded-2xl overflow-hidden shadow-float bg-gradient-to-b from-slate-200 to-slate-300 p-1.5 max-w-5xl mx-auto">
-          <div className="bg-white rounded-xl overflow-hidden">
-            {/* Browser chrome */}
-            <div className="bg-slate-100 border-b border-slate-200 h-10 flex items-center gap-2 px-4">
-              <div className="flex gap-1.5">
+        {/* Bottom Dashboard Peek */}
+        <div className="relative mx-auto max-w-6xl -mb-32 lg:-mb-40">
+          <div className="relative rounded-t-3xl overflow-hidden border-t border-x border-slate-200/60 shadow-2xl bg-white h-[250px] lg:h-[350px]">
+            {/* Browser Header */}
+            <div className="flex items-center gap-2 px-6 py-4 border-b border-slate-100 bg-slate-50/80">
+              <div className="flex gap-2">
                 <div className="w-3 h-3 rounded-full bg-red-400" />
                 <div className="w-3 h-3 rounded-full bg-yellow-400" />
                 <div className="w-3 h-3 rounded-full bg-green-400" />
               </div>
-              <div className="flex-1 flex justify-center">
-                <div className="bg-white rounded-md px-4 py-1 text-xs text-muted-foreground border border-slate-200 flex items-center gap-2">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  app.instagrow.io/dashboard
+              <div className="ml-4 px-4 py-1.5 bg-white rounded-lg border border-slate-200 text-xs text-slate-400 font-medium flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full" />
+                app.instagrow.com/dashboard
+              </div>
+            </div>
+            
+            {/* Dashboard Mockup */}
+            <div className="p-8 bg-slate-50/50 h-full">
+              <div className="grid grid-cols-12 gap-6 h-full">
+                <div className="col-span-2 hidden md:block bg-white rounded-2xl border border-slate-100 p-4 space-y-4">
+                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500" />
+                   <div className="h-2 w-full bg-slate-100 rounded" />
+                   <div className="h-2 w-3/4 bg-slate-100 rounded" />
+                </div>
+                <div className="col-span-12 md:col-span-10 bg-white rounded-2xl border border-slate-100 p-6">
+                   <div className="flex justify-between items-center mb-6">
+                     <div className="h-6 w-40 bg-slate-100 rounded" />
+                     <div className="h-10 w-28 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg" />
+                   </div>
+                   <div className="grid grid-cols-3 gap-4">
+                     <div className="h-32 bg-slate-50 rounded-xl border border-slate-100" />
+                     <div className="h-32 bg-slate-50 rounded-xl border border-slate-100" />
+                     <div className="h-32 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border border-purple-100" />
+                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Dashboard content */}
-            <div className="aspect-[16/9] bg-slate-50 p-4 lg:p-6 grid grid-cols-12 gap-4">
-              {/* Sidebar */}
-              <div className="col-span-2 bg-slate-800 rounded-xl p-3 flex flex-col gap-2">
-                <div className="w-8 h-8 gradient-instagram rounded-lg mb-4" />
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <div key={i} className={`h-8 rounded-lg ${i === 2 ? 'bg-slate-700' : 'bg-slate-800 hover:bg-slate-700'} transition-colors`} />
-                ))}
-              </div>
-              
-              {/* Main content */}
-              <div className="col-span-7 space-y-4">
-                {/* Stats row */}
-                <div className="grid grid-cols-5 gap-3">
-                  {[
-                    { color: '#ef4444', value: '19', label: 'Sent' },
-                    { color: '#3b82f6', value: '149', label: 'Opened' },
-                    { color: '#14b8a6', value: '213', label: 'Replied' },
-                    { color: '#f97316', value: '12', label: 'Clicked' },
-                    { color: '#a855f7', value: '34', label: 'Converted' },
-                  ].map((stat, i) => (
-                    <div key={i} className="bg-white rounded-lg p-3 shadow-sm border border-slate-100">
-                      <div className="h-12 rounded-md mb-2" style={{ backgroundColor: stat.color }} />
-                      <p className="text-lg font-bold text-center">{stat.value}</p>
-                      <p className="text-[10px] text-muted-foreground text-center uppercase">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-                
-                {/* Chart area */}
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 h-32 flex items-end gap-2 pb-2">
-                  {[40, 65, 45, 80, 55, 90, 70, 85, 60, 75, 95, 50].map((h, i) => (
-                    <div 
-                      key={i} 
-                      className="flex-1 bg-gradient-to-t from-accent to-accent/60 rounded-t-sm transition-all hover:from-accent/80"
-                      style={{ height: `${h}%` }}
-                    />
-                  ))}
-                </div>
-
-                {/* Automation rules */}
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
-                  <p className="text-xs font-semibold mb-3">Active Automations</p>
-                  <div className="space-y-2">
-                    {[
-                      { trigger: 'LINK', response: 'Send product link DM' },
-                      { trigger: 'INFO', response: 'Send info carousel' },
-                    ].map((rule, i) => (
-                      <div key={i} className="flex items-center gap-3 p-2 bg-slate-50 rounded-lg">
-                        <span className="px-2 py-1 bg-accent/10 text-accent text-[10px] font-bold rounded">"{rule.trigger}"</span>
-                        <span className="text-[10px] text-muted-foreground">→</span>
-                        <span className="text-[10px] text-foreground font-medium">{rule.response}</span>
-                        <div className="ml-auto w-8 h-4 bg-accent rounded-full relative">
-                          <div className="absolute right-0.5 top-0.5 w-3 h-3 bg-white rounded-full" />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              
-              {/* Right panel */}
-              <div className="col-span-3 space-y-4">
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
-                  <p className="text-xs font-semibold mb-3">Recent DMs</p>
-                  <div className="space-y-3">
-                    {[
-                      { name: 'Sarah M.', msg: 'Thanks for the link! 🙌', time: '2m' },
-                      { name: 'Alex K.', msg: 'Just ordered!', time: '5m' },
-                      { name: 'Mike R.', msg: 'This is amazing', time: '8m' },
-                      { name: 'Emma T.', msg: 'Love your content', time: '12m' },
-                    ].map((dm, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-[10px] font-semibold text-slate-600">
-                          {dm.name[0]}
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-[10px] font-semibold truncate">{dm.name}</p>
-                          <p className="text-[9px] text-muted-foreground truncate">{dm.msg}</p>
-                        </div>
-                        <span className="text-[9px] text-muted-foreground">{dm.time}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
-                  <p className="text-xs font-semibold mb-2">Performance</p>
-                  <div className="flex items-center gap-2">
-                    <div className="text-2xl font-bold text-accent">+247%</div>
-                    <div className="text-[10px] text-muted-foreground">vs last week</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Play button overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-black/0 hover:bg-black/5 transition-colors cursor-pointer group">
-            <div className="w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center group-hover:scale-110 transition-transform opacity-90 group-hover:opacity-100">
-              <Play className="w-6 h-6 text-accent fill-accent ml-1" />
-            </div>
+            {/* Fade Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none" />
           </div>
         </div>
       </div>

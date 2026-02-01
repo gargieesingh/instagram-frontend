@@ -4,6 +4,7 @@ import StatsSection from "@/components/StatsSection";
 import DMAutomationSection from "@/components/DMAutomationSection";
 import PostSchedulingSection from "@/components/PostSchedulingSection";
 import CommentAutomationSection from "@/components/CommentAutomationSection";
+import AIPostCreationSection from "@/components/AIPostCreationSection";
 import WhyInstagramSection from "@/components/WhyInstagramSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import FAQSection from "@/components/FAQSection";
@@ -20,6 +21,7 @@ const Index = () => {
         <DMAutomationSection />
         <PostSchedulingSection />
         <CommentAutomationSection />
+        <AIPostCreationSection />
         <WhyInstagramSection />
         <FeaturesSection />
         <FAQSection />
