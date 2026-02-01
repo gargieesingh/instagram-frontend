@@ -187,47 +187,64 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Bottom Dashboard Peek */}
-        <div className="relative mx-auto max-w-6xl -mb-32 lg:-mb-40">
-          <div className="relative rounded-t-3xl overflow-hidden border-t border-x border-slate-200/60 shadow-2xl bg-white h-[250px] lg:h-[350px]">
-            {/* Browser Header */}
-            <div className="flex items-center gap-2 px-6 py-4 border-b border-slate-100 bg-slate-50/80">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-400" />
-                <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                <div className="w-3 h-3 rounded-full bg-green-400" />
-              </div>
-              <div className="ml-4 px-4 py-1.5 bg-white rounded-lg border border-slate-200 text-xs text-slate-400 font-medium flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-500 rounded-full" />
-                app.instagrow.com/dashboard
-              </div>
-            </div>
-            
-            {/* Dashboard Mockup */}
-            <div className="p-8 bg-slate-50/50 h-full">
-              <div className="grid grid-cols-12 gap-6 h-full">
-                <div className="col-span-2 hidden md:block bg-white rounded-2xl border border-slate-100 p-4 space-y-4">
-                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500" />
-                   <div className="h-2 w-full bg-slate-100 rounded" />
-                   <div className="h-2 w-3/4 bg-slate-100 rounded" />
+        {/* Video Demo Section */}
+        <div className="relative mx-auto max-w-5xl mt-16 lg:mt-20">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200/60 bg-slate-900 group cursor-pointer">
+            {/* Video Thumbnail */}
+            <div className="relative aspect-video">
+              {/* Browser Chrome Header */}
+              <div className="absolute top-0 left-0 right-0 flex items-center gap-2 px-4 py-3 bg-slate-800/90 backdrop-blur-sm z-10">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-red-500" />
+                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                  <div className="w-3 h-3 rounded-full bg-green-500" />
                 </div>
-                <div className="col-span-12 md:col-span-10 bg-white rounded-2xl border border-slate-100 p-6">
-                   <div className="flex justify-between items-center mb-6">
-                     <div className="h-6 w-40 bg-slate-100 rounded" />
-                     <div className="h-10 w-28 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg" />
-                   </div>
-                   <div className="grid grid-cols-3 gap-4">
-                     <div className="h-32 bg-slate-50 rounded-xl border border-slate-100" />
-                     <div className="h-32 bg-slate-50 rounded-xl border border-slate-100" />
-                     <div className="h-32 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl border border-purple-100" />
-                   </div>
+                <div className="ml-3 px-3 py-1 bg-slate-700/50 rounded text-xs text-slate-400 font-medium">
+                  app.instagrow.com/dashboard
                 </div>
               </div>
+              
+              {/* Dashboard Screenshot/Thumbnail */}
+              <div className="w-full h-full bg-gradient-to-br from-slate-800 via-slate-900 to-purple-900 pt-12">
+                <div className="p-6 h-full">
+                  <div className="grid grid-cols-12 gap-4 h-full opacity-60">
+                    {/* Sidebar */}
+                    <div className="col-span-2 bg-slate-800/50 rounded-xl p-3 space-y-3">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500" />
+                      <div className="h-2 w-full bg-slate-700 rounded" />
+                      <div className="h-2 w-3/4 bg-slate-700 rounded" />
+                      <div className="h-2 w-5/6 bg-slate-700 rounded" />
+                    </div>
+                    {/* Main Content */}
+                    <div className="col-span-10 space-y-4">
+                      <div className="flex justify-between">
+                        <div className="h-6 w-40 bg-slate-700 rounded" />
+                        <div className="h-8 w-24 bg-purple-600 rounded" />
+                      </div>
+                      <div className="grid grid-cols-3 gap-4">
+                        <div className="h-24 bg-slate-800/50 rounded-xl" />
+                        <div className="h-24 bg-slate-800/50 rounded-xl" />
+                        <div className="h-24 bg-slate-800/50 rounded-xl" />
+                      </div>
+                      <div className="h-32 bg-slate-800/50 rounded-xl" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Play Button Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors duration-300">
+                <div className="w-20 h-20 lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 lg:w-10 lg:h-10 text-purple-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
             </div>
-            
-            {/* Fade Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none" />
           </div>
+          
+          {/* Video Caption */}
+          <p className="text-center text-sm text-slate-500 mt-4">See how InstaGrow helps you automate your Instagram growth in minutes</p>
         </div>
       </div>
     </section>
